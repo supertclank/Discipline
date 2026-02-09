@@ -1,17 +1,16 @@
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     id("com.google.gms.google-services")
     id("kotlin-parcelize")
 }
 
 android {
-    namespace = "com.example.campaign_master"
+    namespace = "com.example.discipline"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.campaign_master"
+        applicationId = "com.example.discipline"
         minSdk = 35
         targetSdk = 35
         versionCode = 1
@@ -37,6 +36,7 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
     buildFeatures {
         viewBinding = true
         compose = true
@@ -69,8 +69,6 @@ dependencies {
     implementation(libs.kotlinx.serialization.json.v160)
     implementation(libs.retrofit2.kotlinx.serialization.converter)
     implementation(libs.okhttp)
-
-
 
     // firebase dependencies
     implementation(platform(libs.firebase.bom))
