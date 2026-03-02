@@ -28,6 +28,7 @@ uiTooling = "1.10.2"
 uiToolingPreview = "1.10.2"
 uiToolingPreviewAndroid = "1.10.2"
 firebaseDatabaseKtx = "21.0.0"
+composeIcons = "1.7.8"
 
 [libraries]
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
@@ -39,6 +40,7 @@ androidx-navigation-compose = { module = "androidx.navigation:navigation-compose
 androidx-ui = { module = "androidx.compose.ui:ui", version.ref = "ui" }
 androidx-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "uiTooling" }
 androidx-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "uiToolingPreview" }
+androidx-material-icons-core = { module = "androidx.compose.material:material-icons-core", version.ref = "composeIcons" }
 firebase-analytics = { module = "com.google.firebase:firebase-analytics", version = "23.0.0" }
 firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
 firebase-firestore-ktx = { module = "com.google.firebase:firebase-firestore-ktx", version.ref = "firebaseFirestoreKtx" }
@@ -62,9 +64,6 @@ retrofit2-kotlinx-serialization-converter = { module = "com.jakewharton.retrofit
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
-
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
-
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
-
 google-services = { id = "com.google.gms.google-services", version = "4.4.4" }
