@@ -16,19 +16,19 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun SettingsScreen () {
+fun SettingsScreen(viewModel: SettingsViewModel) {
     Box(
-    modifier = Modifier
-    .fillMaxSize()
-    .background(Color.White)
-    .padding(16.dp)
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Color.White)
+            .padding(16.dp)
     ) {
-        Column (
+        Column(
             modifier = Modifier.fillMaxSize(),
             verticalArrangement = Arrangement.Top,
             horizontalAlignment = Alignment.CenterHorizontally
-        ){
-            Text (
+        ) {
+            Text(
                 text = "Settings Screen",
                 fontSize = 24.sp,
                 fontWeight = FontWeight.Bold

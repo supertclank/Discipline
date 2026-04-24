@@ -16,7 +16,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun RewardSessionScreen (){
+fun RewardSessionScreen(viewmodel: RewardSessionViewModel) {
 
     Box(
         modifier = Modifier
@@ -24,12 +24,12 @@ fun RewardSessionScreen (){
             .background(Color.White)
             .padding(16.dp)
     ) {
-        Column (
+        Column(
             modifier = Modifier.fillMaxSize(),
             verticalArrangement = Arrangement.Top,
             horizontalAlignment = Alignment.CenterHorizontally
-        ){
-            Text (
+        ) {
+            Text(
                 text = "Reward Session Screen",
                 fontSize = 24.sp,
                 fontWeight = FontWeight.Bold

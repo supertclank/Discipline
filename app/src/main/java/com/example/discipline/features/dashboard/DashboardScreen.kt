@@ -16,24 +16,24 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun DashboardScreen (){
+fun DashboardScreen(viewModel: DashboardViewModel){
     Box(
         modifier = Modifier
             .fillMaxSize()
             .background(Color.White)
             .padding(16.dp)
     ) {
-        Column (
+        Column(
             modifier = Modifier.fillMaxSize(),
             verticalArrangement = Arrangement.Top,
             horizontalAlignment = Alignment.CenterHorizontally
-        ){
+        ) {
             Text(
                 text = "Discipline",
                 fontSize = 32.sp,
                 fontWeight = FontWeight.Bold
             )
-            Text (
+            Text(
                 text = "Dashboard Screen",
                 fontSize = 24.sp,
                 fontWeight = FontWeight.Bold

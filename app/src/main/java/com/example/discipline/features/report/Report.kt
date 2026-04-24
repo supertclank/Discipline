@@ -1,4 +1,9 @@
 package com.example.discipline.features.report
 
-class Report{
+import androidx.compose.runtime.Composable
+import androidx.lifecycle.viewmodel.compose.viewModel
+
+@Composable
+fun Report (viewModel: ReportViewModel = viewModel()) {
+    ReportScreen(viewModel)
 }

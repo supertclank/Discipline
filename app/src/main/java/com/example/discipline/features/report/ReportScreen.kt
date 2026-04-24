@@ -16,7 +16,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun ReportScreen () {
+fun ReportScreen(viewModel: ReportViewModel) {
 
     Box(
         modifier = Modifier
@@ -24,12 +24,12 @@ fun ReportScreen () {
             .background(Color.White)
             .padding(16.dp)
     ) {
-        Column (
+        Column(
             modifier = Modifier.fillMaxSize(),
             verticalArrangement = Arrangement.Top,
             horizontalAlignment = Alignment.CenterHorizontally
-        ){
-            Text (
+        ) {
+            Text(
                 text = "Report Screen",
                 fontSize = 24.sp,
                 fontWeight = FontWeight.Bold
