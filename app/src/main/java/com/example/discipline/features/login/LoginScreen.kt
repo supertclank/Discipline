@@ -21,7 +21,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.discipline.features.login.uiFeatures.EmailTextField
@@ -29,6 +28,7 @@ import com.example.discipline.features.login.uiFeatures.ForgotPasswordButton
 import com.example.discipline.features.login.uiFeatures.PasswordTextField
 import com.example.discipline.features.login.uiFeatures.RegisterButton
 import com.example.discipline.features.login.uiFeatures.SubmitLoginButton
+import com.example.discipline.features.login.states
 
 @Composable
 fun LoginScreen(viewModel: LoginViewModel) {
@@ -81,7 +81,7 @@ fun LoginScreen(viewModel: LoginViewModel) {
             )
 
             ForgotPasswordButton(
-                onClick = { /* TODO: Forgot Password */ },
+                onClick = { NavigateToForgotPassword },
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(50.dp)
