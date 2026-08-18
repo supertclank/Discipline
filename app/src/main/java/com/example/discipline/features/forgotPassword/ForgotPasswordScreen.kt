@@ -1,10 +1,9 @@
-package com.example.discipline.features.login
+package com.example.discipline.features.forgotPassword
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -23,17 +22,13 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.discipline.features.login.states.LoginEffect
+import com.example.discipline.features.forgotPassword.uiFeatures.CancelButton
+import com.example.discipline.features.forgotPassword.uiFeatures.SubmitEmailButton
 import com.example.discipline.features.login.uiFeatures.EmailTextField
-import com.example.discipline.features.login.uiFeatures.ForgotPasswordButton
-import com.example.discipline.features.login.uiFeatures.PasswordTextField
-import com.example.discipline.features.login.uiFeatures.RegisterButton
-import com.example.discipline.features.login.uiFeatures.SubmitLoginButton
 
 @Composable
-fun LoginScreen(viewModel: LoginViewModel) {
+fun ForgotPasswordScreen(viewModel: ForgotPasswordViewModel) {
     var email by remember { mutableStateOf("") }
-    var password by remember { mutableStateOf("") }
     var isLoading by remember { mutableStateOf(false) }
 
     Box(
@@ -49,9 +44,16 @@ fun LoginScreen(viewModel: LoginViewModel) {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(
-                text = "Welcome",
+                text = "Forgot Password?",
                 fontSize = 32.sp,
                 fontWeight = FontWeight.Bold,
+                color = MaterialTheme.colorScheme.primary,
+                modifier = Modifier.padding(bottom = 24.dp)
+            )
+
+            Text(
+                text = "Enter Your Email Below To reset",
+                fontSize = 16.sp,
                 color = MaterialTheme.colorScheme.primary,
                 modifier = Modifier.padding(bottom = 24.dp)
             )
@@ -62,52 +64,24 @@ fun LoginScreen(viewModel: LoginViewModel) {
                 modifier = Modifier.fillMaxWidth()
             )
 
-            PasswordTextField(
-                value = password,
-                onValueChange = { password = it },
-                modifier = Modifier.fillMaxWidth()
-            )
-
-
-
             Spacer(modifier = Modifier.height(8.dp))
 
-            SubmitLoginButton(
-                enabled = !isLoading && email.isNotEmpty() && password.isNotEmpty(),
+            SubmitEmailButton(
+                enabled = !isLoading && email.isNotEmpty(),
                 onClick = { isLoading = true },
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(50.dp)
-            )
 
-            ForgotPasswordButton(
-                onClick = { LoginEffect.NavigateToForgotPassword },
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(50.dp)
             )
-
-            Row(
-                modifier = Modifier.padding(top = 16.dp),
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.Center
-            ) {
-                Text(
-                    text = "Don't have an account? ",
-                    fontSize = 14.sp,
-                    color = Color.Gray
-                )
-            }
 
             Spacer(modifier = Modifier.height(4.dp))
 
-            RegisterButton(
-                onClick = { /* TODO: Navigate to Register */ },
-                modifier = Modifier
-                    .fillMaxWidth()
+            CancelButton (
+                modifier = Modifier.fillMaxWidth()
                     .height(50.dp)
-            )
 
+            )
         }
     }
 }
