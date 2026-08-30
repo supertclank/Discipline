@@ -77,8 +77,9 @@ fun ForgotPasswordScreen(viewModel: ForgotPasswordViewModel) {
 
             Spacer(modifier = Modifier.height(4.dp))
 
-            CancelButton (
-                modifier = Modifier.fillMaxWidth()
+            CancelButton(
+                modifier = Modifier
+                    .fillMaxWidth()
                     .height(50.dp)
 
             )
